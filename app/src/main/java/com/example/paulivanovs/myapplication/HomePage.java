@@ -14,7 +14,6 @@ import android.widget.TextView;
 public class HomePage extends AppCompatActivity
 {
     TextView text_hello_world;
-    //Button btn_hello_world;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -70,7 +69,6 @@ public class HomePage extends AppCompatActivity
      */
     {
         text_hello_world = (TextView) (findViewById(R.id.text_hello_world));
-        //btn_hello_world = (Button) (findViewById(R.id.btn_hello_world));
         text_hello_world.setText("Hello World!");
 
     }
