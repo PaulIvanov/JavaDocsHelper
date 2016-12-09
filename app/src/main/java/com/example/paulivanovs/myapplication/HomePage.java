@@ -8,8 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
 import android.widget.TextView;
+import java.util.ArrayList;
 
 
 public class HomePage extends AppCompatActivity
@@ -20,10 +20,19 @@ public class HomePage extends AppCompatActivity
      */
 {
     TextView text_hello_world;
+    private int m_Word_Index;
+    ArrayList<String> m_Text_List;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
+        m_Word_Index = 0;
+        m_Text_List = new ArrayList<String>();
+        m_Text_List.add("Hello World");
+        m_Text_List.add("Android Studio is cool");
+        m_Text_List.add("JavaDocs Future Home Page");
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -75,7 +84,7 @@ public class HomePage extends AppCompatActivity
      */
     {
         text_hello_world = (TextView) (findViewById(R.id.text_hello_world));
-        text_hello_world.setText("Hello World!");
+        text_hello_world.setText(m_Text_List.get(++m_Word_Index % m_Text_List.size() - 1));
 
     }
 }
