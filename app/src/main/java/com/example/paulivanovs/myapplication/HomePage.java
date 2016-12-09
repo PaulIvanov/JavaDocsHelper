@@ -61,7 +61,13 @@ public class HomePage extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
+
     public void HelloAction(View v)
+    /*
+       This is a action listener for the btn_hello_world to
+       alter the text of text_hello_world.
+       Parameter v is the view of which the button is on
+     */
     {
         text_hello_world = (TextView) (findViewById(R.id.text_hello_world));
         //btn_hello_world = (Button) (findViewById(R.id.btn_hello_world));
