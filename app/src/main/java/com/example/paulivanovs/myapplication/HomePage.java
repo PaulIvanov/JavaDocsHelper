@@ -38,16 +38,6 @@ public class HomePage extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view)
-            {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
     }
 
     @Override
@@ -84,7 +74,6 @@ public class HomePage extends AppCompatActivity
      */
     {
         text_hello_world = (TextView) (findViewById(R.id.text_hello_world));
-        text_hello_world.setText(m_Text_List.get(++m_Word_Index % m_Text_List.size() - 1));
-
+        text_hello_world.setText(m_Text_List.get(++m_Word_Index % m_Text_List.size() ));
     }
 }
