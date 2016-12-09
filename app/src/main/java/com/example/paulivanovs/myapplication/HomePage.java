@@ -84,7 +84,8 @@ public class HomePage extends AppCompatActivity
      */
     {
         text_hello_world = (TextView) (findViewById(R.id.text_hello_world));
-        text_hello_world.setText(m_Text_List.get(++m_Word_Index % m_Text_List.size() - 1));
+        int idx = ++m_Word_Index % (m_Text_List.size());
+        text_hello_world.setText(m_Text_List.get(idx));
 
     }
 }
