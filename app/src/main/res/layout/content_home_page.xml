@@ -13,8 +13,21 @@
     tools:context="com.example.paulivanovs.myapplication.HomePage"
     tools:showIn="@layout/activity_home_page">
 
+    <Button
+        android:text="Click Me!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="65dp"
+        android:onClick="HelloAction"
+        android:id="@+id/btn_hello_world" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="135dp"
+        android:id="@+id/text_hello_world" />
 </RelativeLayout>
