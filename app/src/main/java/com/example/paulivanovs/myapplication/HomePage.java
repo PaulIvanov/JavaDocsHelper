@@ -11,7 +11,13 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 
+
 public class HomePage extends AppCompatActivity
+    /*
+        This is the homepage java class that handles all the classes
+        and action listeners for the homepage.
+        Extends AppCompatActivity.
+     */
 {
     TextView text_hello_world;
 
