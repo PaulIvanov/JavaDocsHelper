@@ -1,8 +1,7 @@
 package com.example.paulivanovs.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -77,5 +76,15 @@ public class HomePage extends AppCompatActivity
 
         text_hello_world.setText(m_Text_List.get(++m_Word_Index % m_Text_List.size())); //mod by size to prevent out of index error
 
+    }
+
+    public void GoToClassDescriptionActivityAction(View v)
+    /*
+       This is a action listener for the btn_hello_world to
+       alter the text of text_hello_world.
+       Parameter v is the view of which the button is on
+     */
+    {
+        startActivity(new Intent(getApplicationContext(), ClassDescriptionActivity.class));
     }
 }
