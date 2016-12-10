@@ -1,40 +1,35 @@
 package com.example.paulivanovs.myapplication;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
 import java.util.ArrayList;
 
 
-public class HomePage extends AppCompatActivity
+public class ClassPage extends AppCompatActivity
     /*
-        This is the homepage java class that handles all the classes
+        This is the ClassPage java class that handles all the classes
         and action listeners for the homepage.
         Extends AppCompatActivity.
      */
 {
-    TextView text_hello_world;
-    private int m_Word_Index;
     ArrayList<String> m_Text_List;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
-        m_Word_Index = 0;
-        m_Text_List = new ArrayList<String>();
+        m_Text_List = new ArrayList<>();
         m_Text_List.add("Hello World");
         m_Text_List.add("Android Studio is cool");
         m_Text_List.add("JavaDocs Future Home Page");
 
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_page);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setContentView(R.layout.content_class_page);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.class_toolbar);
         setSupportActionBar(toolbar);
 
     }
@@ -65,27 +60,11 @@ public class HomePage extends AppCompatActivity
     }
 
 
-    public void HelloAction(View v)
+    public void ClassAction(View v)
     /*
-       This is a action listener for the btn_hello_world to
-       alter the text of text_hello_world.
+       This is a action listener for the btn_add_class to
        Parameter v is the view of which the button is on
      */
     {
-        text_hello_world = (TextView) (findViewById(R.id.text_hello_world));
-
-        text_hello_world.setText(m_Text_List.get(++m_Word_Index % m_Text_List.size())); //mod by size to prevent out of index error
-
-    }
-
-    public void GoToClassActivityAction(View v)
-    /*
-       This is a action listener for the btn_hello_world to
-       alter the text of text_hello_world.
-       Parameter v is the view of which the button is on
-     */
-    {
-        startActivity(new Intent(getApplicationContext(), ClassPage.class));
-
     }
 }

@@ -30,4 +30,23 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="135dp"
         android:id="@+id/text_hello_world" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Go To Class Page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="GoToClassActivityAction"
+        android:id="@+id/btn_class_add"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp" />
+
 </RelativeLayout>
